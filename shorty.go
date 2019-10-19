@@ -16,7 +16,7 @@ func randByte() byte {
 // randSeq returns n random bytes from charpool
 func randSeq(n int) []byte {
 	rand.Seed(time.Now().UnixNano())
-	out := make([]byte, n)
+	out := make([]byte, n, n)
 	for i := 0; i < n; i++ {
 		out[i] = randByte()
 	}
